@@ -1095,22 +1095,28 @@ autocmd ColorScheme * if g:colors_name != "solarized" | silent! aunmenu Solarize
 
 exe "hi! Class"				.s:fmt_none		"guifg=#875fd7"		"ctermfg=98"	.s:bg_none
 exe "hi! Structure"			.s:fmt_none		"guifg=#8787ff"		"ctermfg=105"	.s:bg_none
-exe "hi! Type"				.s:fmt_none		"guifg=#5f87ff"		"ctermfg=69"	.s:bg_none
+exe "hi! Type"				.s:fmt_none		"guifg=#0087ff"		"ctermfg=33"	.s:bg_none
 exe "hi! Union"				.s:fmt_none		"guifg=#af005f"		"ctermfg=125"	.s:bg_none
 exe "hi! EnumerationName"	.s:fmt_none		"guifg=#00afff"		"ctermfg=39"	.s:bg_none
+if &background == "dark"
+	exe "hi! Namespace"		.s:fmt_none		"guifg=#00ffd7"		"ctermfg=50"	.s:bg_none
+else
+	exe "hi! Namespace"		.s:fmt_none		"guifg=#0000d7"		"ctermfg=20"	.s:bg_none
+endif
 
 exe "hi! EnumerationValue"	.s:fmt_none		"guifg=#00afff"		"ctermfg=39"	.s:bg_none
 exe "hi! DefinedName"		.s:fmt_none		"guifg=#d75f00"		"ctermfg=166"	.s:bg_none
-exe "hi! GlobalVariable"	.s:fmt_none		"guifg=#af00af"		"ctermfg=166"	.s:bg_none
+exe "hi! GlobalVariable"	.s:fmt_none		"guifg=#d700af"		"ctermfg=163"	.s:bg_none
+hi link Extern GlobalVariable 
 if &background == "dark"
 	exe "hi! Member"		.s:fmt_none		"guifg=#d7af00"		"ctermfg=178"	.s:bg_none
-	exe "hi! LocalVariable"	.s:fmt_none		"guifg=#afd700"		"ctermfg=148"	.s:bg_none
+	exe "hi! LocalVariable"	.s:fmt_none		"guifg=#5fd75f"		"ctermfg=77"	.s:bg_none
 else
 	exe "hi! Member"		.s:fmt_none		"guifg=#5f5f00"		"ctermfg=58"	.s:bg_none
 	exe "hi! LocalVariable"	.s:fmt_none		"guifg=#008700"		"ctermfg=28"	.s:bg_none
 endif
 
-exe "hi! Function"			.s:fmt_none		.s:fg_blue			.s:bg_none
+exe "hi! Function"			.s:fmt_none		"guifg=#0087af"		"ctermfg=31"	.s:bg_none
 
 "}}}
 " License "{{{
