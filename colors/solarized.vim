@@ -1120,6 +1120,20 @@ hi link Extern GlobalVariable
 exe "hi! Function"			.s:fmt_none		"guifg=#0087af"		"ctermfg=31"	.s:bg_none
 
 "}}}
+" Corax's add-on 2: Tagbar "{{{
+" ---------------------------------------------------------------------
+
+if &background == "dark"
+	exe "hi! TagbarVisibilityPublic"		.s:fmt_none		"guifg=#00ff00"		"ctermfg=46"	.s:bg_none
+	exe "hi! TagbarVisibilityProtected"		.s:fmt_none		"guifg=#00d7ff"		"ctermfg=45"	.s:bg_none
+	exe "hi! TagbarVisibilityPrivate"		.s:fmt_none		"guifg=#d70000"		"ctermfg=160"	.s:bg_none
+else
+	exe "hi! TagbarVisibilityPublic"		.s:fmt_none		"guifg=#00af00"		"ctermfg=34"	.s:bg_none
+	exe "hi! TagbarVisibilityProtected"		.s:fmt_none		"guifg=#005fff"		"ctermfg=27"	.s:bg_none
+	exe "hi! TagbarVisibilityPrivate"		.s:fmt_none		"guifg=#ff0000"		"ctermfg=196"	.s:bg_none
+endif
+
+"}}}
 " License "{{{
 " ---------------------------------------------------------------------
 "
