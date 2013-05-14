@@ -1094,6 +1094,7 @@ autocmd ColorScheme * if g:colors_name != "solarized" | silent! aunmenu Solarize
 " ---------------------------------------------------------------------
 
 exe "hi! Class"				.s:fmt_none		"guifg=#875fd7"		"ctermfg=98"	.s:bg_none
+hi! link Interface Class
 exe "hi! Structure"			.s:fmt_none		"guifg=#8787ff"		"ctermfg=105"	.s:bg_none
 exe "hi! Type"				.s:fmt_none		"guifg=#0087ff"		"ctermfg=33"	.s:bg_none
 exe "hi! Union"				.s:fmt_none		"guifg=#af005f"		"ctermfg=125"	.s:bg_none
