@@ -1103,6 +1103,7 @@ if &background == "dark"
 else
 	exe "hi! Namespace"		.s:fmt_none		"guifg=#0000d7"		"ctermfg=20"	.s:bg_none
 endif
+hi! link Package Namespace
 
 exe "hi! EnumerationValue"	.s:fmt_none		"guifg=#00afff"		"ctermfg=39"	.s:bg_none
 exe "hi! DefinedName"		.s:fmt_none		"guifg=#d75f00"		"ctermfg=166"	.s:bg_none
@@ -1115,9 +1116,11 @@ else
 	exe "hi! LocalVariable"	.s:fmt_none		"guifg=#008700"		"ctermfg=28"	.s:bg_none
 	exe "hi! GlobalVariable".s:fmt_none		"guifg=#af0087"		"ctermfg=163"	.s:bg_none
 endif
-hi link Extern GlobalVariable 
+hi! link Field Member
+hi! link Extern GlobalVariable 
 
 exe "hi! Function"			.s:fmt_none		"guifg=#0087af"		"ctermfg=31"	.s:bg_none
+hi! link Method Function
 
 "}}}
 " Corax's add-on 2: Tagbar "{{{
