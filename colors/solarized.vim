@@ -1098,7 +1098,8 @@ hi! link Interface Class
 exe "hi! Structure"			.s:fmt_none		"guifg=#8787ff"		"ctermfg=105"	.s:bg_none
 exe "hi! Type"				.s:fmt_none		"guifg=#0087ff"		"ctermfg=33"	.s:bg_none
 exe "hi! Union"				.s:fmt_none		"guifg=#af005f"		"ctermfg=125"	.s:bg_none
-exe "hi! EnumerationName"	.s:fmt_none		"guifg=#00afff"		"ctermfg=39"	.s:bg_none
+hi! link EnumerationName Type
+hi! link EnumeratorName  Type
 if &background == "dark"
 	exe "hi! Namespace"		.s:fmt_none		"guifg=#00ffd7"		"ctermfg=50"	.s:bg_none
 else
