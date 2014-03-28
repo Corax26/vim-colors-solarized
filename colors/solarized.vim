@@ -1090,7 +1090,19 @@ endfunction
 autocmd ColorScheme * if g:colors_name != "solarized" | silent! aunmenu Solarized | else | call SolarizedMenu() | endif
 
 "}}}
-" Corax's add-on: TagHighlight "{{{
+" Corax's add-on: Moar color "{{{
+" ---------------------------------------------------------------------
+
+if &background == "dark"
+	exe "hi! Operator"		.s:fmt_none		"guifg=#93b84a"		"ctermfg=107"	.s:bg_none
+	exe "hi! Delimiter"		.s:fmt_none		"guifg=#bbbb55"		"ctermfg=143"	.s:bg_none
+else
+	exe "hi! Operator"		.s:fmt_none		"guifg=#54701D"		"ctermfg=66"	.s:bg_none
+	exe "hi! Delimiter"		.s:fmt_none		"guifg=#956A0C"		"ctermfg=94"	.s:bg_none
+endif
+
+"}}}
+" Corax's add-on 2: TagHighlight "{{{
 " ---------------------------------------------------------------------
 
 exe "hi! Class"				.s:fmt_none		"guifg=#875fd7"		"ctermfg=98"	.s:bg_none
@@ -1125,7 +1137,7 @@ exe "hi! Function"			.s:fmt_none		"guifg=#0087af"		"ctermfg=31"	.s:bg_none
 hi! link Method Function
 
 "}}}
-" Corax's add-on 2: Tagbar "{{{
+" Corax's add-on 3: Tagbar "{{{
 " ---------------------------------------------------------------------
 
 if &background == "dark"
