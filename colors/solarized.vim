@@ -1133,8 +1133,9 @@ endif
 hi! link Field Member
 hi! link Extern GlobalVariable 
 
-exe "hi! Function"			.s:fmt_none		"guifg=#0087af"		"ctermfg=31"	.s:bg_none
-hi! link Method Function
+exe "hi! Identifier"		.s:fmt_none		"guifg=#0087af"		"ctermfg=31"	.s:bg_none
+hi! link Function Identifier
+hi! link Method	Identifier
 
 "}}}
 " Corax's add-on 3: Tagbar "{{{
