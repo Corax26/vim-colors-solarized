@@ -769,9 +769,11 @@ exe "hi! javaScript"        .s:fmt_none .s:fg_yellow .s:bg_none
 "}}}
 " perl highlighting "{{{
 " ---------------------------------------------------------------------
-exe "hi! perlHereDoc"    . s:fg_base1  .s:bg_back   .s:fmt_none
-exe "hi! perlVarPlain"   . s:fg_yellow .s:bg_back   .s:fmt_none
-exe "hi! perlStatementFileDesc". s:fg_cyan.s:bg_back.s:fmt_none
+exe "hi! perlHereDoc"		. s:fg_base1  .s:bg_back   .s:fmt_none
+exe "hi! perlIdentifier"	. s:fg_yellow .s:bg_back   .s:fmt_none
+"exe "hi! perlStatementFileDesc". s:fg_cyan.s:bg_back.s:fmt_none
+hi! link perlFunctionName	Function
+hi! link perlMethod			Function
 
 "}}}
 " tex highlighting "{{{
@@ -1120,6 +1122,7 @@ endif
 hi! link Package Namespace
 
 exe "hi! EnumerationValue"	.s:fmt_none		"guifg=#00afff"		"ctermfg=39"	.s:bg_none
+hi! link GlobalConstant EnumerationValue
 exe "hi! DefinedName"		.s:fmt_none		"guifg=#d75f00"		"ctermfg=166"	.s:bg_none
 if &background == "dark"
 	exe "hi! Member"		.s:fmt_none		"guifg=#d7af00"		"ctermfg=178"	.s:bg_none
