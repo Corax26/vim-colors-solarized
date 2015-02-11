@@ -1120,6 +1120,7 @@ else
 	exe "hi! Namespace"		.s:fmt_none		"guifg=#0000d7"		"ctermfg=20"	.s:bg_none
 endif
 hi! link Package Namespace
+hi! link Import Namespace
 
 exe "hi! EnumerationValue"	.s:fmt_none		"guifg=#00afff"		"ctermfg=39"	.s:bg_none
 hi! link GlobalConstant EnumerationValue
